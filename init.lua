@@ -740,6 +740,10 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'pretty-php', -- Used to format PHP code
+        'clang-format', -- Used to format C/C++ code
+        'beautysh', -- Used to format shell scripts
+        'pyink', -- Used to format Python code
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -792,6 +796,13 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        c = { 'clang-format' },
+        cpp = { 'clang-format' },
+        php = { 'pretty-php' },
+        rust = { 'rustfmt' },
+        sh = { 'beautysh' },
+        python = { 'pyink' },
+
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
