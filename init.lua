@@ -88,6 +88,10 @@ P.S. You can delete this when you're done too. It's your config now! :)
 -- See `:help mapleader`
 --
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+vim.opt.tabstop = 4 -- A tab character looks like 4 spaces
+vim.opt.shiftwidth = 4 -- Indentation levels are 4 spaces
+vim.opt.softtabstop = 4 -- When pressing Tab, insert 4 spaces
+vim.opt.expandtab = true -- Convert tabs to spaces
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
