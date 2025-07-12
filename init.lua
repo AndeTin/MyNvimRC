@@ -443,6 +443,7 @@ require('lazy').setup({
         },
       }
       require('telescope').load_extension 'harpoon'
+      require('telescope').load_extension 'remote-sshfs'
       vim.keymap.set('n', '<leader>fh', function()
         require('telescope').extensions.harpoon.marks()
       end, { desc = 'Telescope Harpoon marks' })
@@ -457,7 +458,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
       vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
       vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
-      vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
+      vim.keymap.set('n', '<leader>sw', builtin.live_grep, { desc = '[S]earch [W]ord' })
       vim.keymap.set('n', '<leader>sg', builtin.git_files, { desc = '[S]earch [G]it Files' })
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
